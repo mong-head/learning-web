@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>박스모델</title>
+    <style media="screen">
+    /* id가 selected인 것을 지정해서 선택자로 만들 수 있음
+    앞에 #붙여야 함 */
+      #selected {
+        border:1px red solid;
+        /* solid : 단선 , dotted : 점선*/
+        padding:10px;
+        /*글과 테두리사이의 여백*/
+        margin:20px;
+        /*tag와tag의 여백 간격 */
+      }
+      #extra {
+        border: blue 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>HTML</li>
+      <li id="selected">CSS</li>
+      <li id="extra">JavaScript</li>
+    </ul>
+  </body>
+</html>
