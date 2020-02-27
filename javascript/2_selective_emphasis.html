@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      li {
+        color : blue;
+      }
+      ul li {
+        font-size : 30px;
+      }
+      /* 클래스 선택자는 .
+       cf : id선택자는 # */
+      .emphasis{
+        text-decoration : underline;
+      }
+    </style>
+  </head>
+  <body>
+    <ol id="subject">
+      <li class="emphasis">html</li>
+      <li>css</li>
+      <li>JavaScript</li>
+    </ol>
+    <input type="button" name="" value="underline-subjects"
+    onclick="document.getElementById('subject').className='emphasis'"/>
+    
+    <ul>
+      <li>gin</li>
+      <li class="emphasis">yu</li>
+      <li>wa</li>
+      <li>ww</li>
+    </ul>
+
+    <!-- 버튼을 누르면 subject를 밑줄쳐지게 -->
+  </body>
+</html>

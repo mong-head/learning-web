@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>버튼과 창 연동</title>
+  </head>
+  <body>
+    <!-- text에 입력하고, 버튼을 누르면 그 내용이 경고창으로 나오게 -->
+    <!-- my 생각으로 코드 짬 -->
+    <input type="text" id="text_search"
+    value="please enter : me" onfocus="value=''" />
+
+    <input type="button" name="" value="alert"
+    onclick="alert(text_search.value)"/>
+
+    <br />
+    <!-- egoing -->
+    <input type="text" id="text_search2"
+    value="please enter : egoing" onfocus="value=''" />
+
+    <input type="button" name="" value="alert"
+    onclick="alert(document.getElementById('text_search2').value)"/>
+    <!-- 위의 코드는 document.~하면서 자바스크립트코드로 이해함 -->
+  </body>
+</html>
