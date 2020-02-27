@@ -19,3 +19,19 @@ article{
 h2{
   font-size: 30px;
 }
+
+#bg_color{
+  float: right;
+  border : solid 1px gray;
+  padding:3px;
+  margin:10px;
+}
+
+body.white{
+  background-color: white;
+  color:black;
+}
+body.black{
+  background-color: black;
+  color:white;
+}
