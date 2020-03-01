@@ -66,30 +66,18 @@
   <script src="http://localhost/script.js"></script>
 
   <article>
-    <?php
-    // if (empty($_GET['id'])==false) {
-    //     echo file_get_contents("information/".$_GET['id'].".txt");
-    // }
-
-    // if (empty($_GET['id'])==false) {
-    //   echo file_get_contents($_GET['id'].".txt");
-    // }
-
-    //me
-    // if (empty($_GET['id'])==false) {
-    //   echo $contents[ $_GET['id']-1];
-    // }
-    if (empty($_GET['id'])===false) {
-        $sql="SELECT * FROM topic WHERE id=".$_GET["id"];
-        $result=mysqli_query($conn, $sql);
-        $row = mysqli_fetch_assoc($result);
-        echo '<h2>'.$row['title'].'</h2>';
-        echo $row['description'];
-    }
-
-    //댓글
-    echo file_get_contents("information/comment.txt");
-     ?>
+    <form class="" action="process.php" method="post">
+      <p>
+        제목 : <input type="text" name="title" value="">
+      </p>
+      <p>
+        작성자 : <input type="text" name="author" value="">
+      </p>
+      <p>
+        본문 : <textarea name="description" rows="8" cols="80"></textarea>
+      </p>
+      <input type="submit" name="" value="제출">
+    </form>
   </article>
 
   <?php

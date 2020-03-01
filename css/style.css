@@ -16,10 +16,12 @@ nav{
 }
 nav ol{
   list-style: none;
+  padding-left: 0px;
 }
 article{
   float:left;
   padding: 10px;
+  width: calc(100% - 245px);
 }
 h2{
   font-size: 30px;

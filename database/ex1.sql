@@ -1,3 +1,9 @@
+--mysql.exe있는 파일로 가기
+cd C:\Bitnami\wampstack-7.3.13-0\mysql\bin
+
+--실행
+mysql -hlocalhost -uroot -p
+
 -- 데이터 베이스 보기
 show databases;
 
