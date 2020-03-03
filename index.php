@@ -40,10 +40,11 @@
     <ol>
       <?php
       // echo file_get_contents("information/list.txt")
-      $contents = array();
+      //$contents = array();
       while ($row = mysqli_fetch_assoc($result)) {
-          echo '<li><a href="http://localhost/index.php?id='.$row['id'].'">'.$row['title'].'</a></li>'."\n";
-          array_push($contents, $row['description']);
+        // 사용자가 직접입력하는 요소는 html등으로 해석하지 않게 htmlspecialchars를 쓴다
+          echo '<li><a href="http://localhost/index.php?id='.$row['id'].'">'.htmlspecialchars($row['title']).'</a></li>'."\n";
+          //array_push($contents, $row['description']);
       }
       ?>
     </ol>
@@ -83,9 +84,14 @@
         $sql="SELECT topic.id,title,name,description FROM topic LEFT JOIN user ON topic.author = user.id WHERE topic.id=".$_GET["id"];
         $result=mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
-        echo '<h2>'.$row['title'].'</h2>';
-        echo '<p>'.$row['name'].'</p>';
-        echo $row['description'];
+        // 사용자 입력 정보는 모두 공격 대상이 될 수 있으므로 이렇게 htmlspecialchars로 감싼다.
+        //escaping
+        echo '<h2>'.htmlspecialchars($row['title']).'</h2>';
+        echo '<p>'.htmlspecialchars($row['name']).'</p>';
+        //echo htmlspecialchars($row['description']);
+        //위의 description을 저렇게 처리하면 about Javascript에서 문제가 생긴다.
+        echo strip_tags($row['description'],"<a><h1><h2><h3><h4><h5><ul><ol><li>");
+        //"<a><h1>~~"는 내가 허용하는 태그들
     }
 
     //댓글

@@ -14,6 +14,5 @@
         document.write("wrong");
       }
     </script>
-
   </body>
 </html>
