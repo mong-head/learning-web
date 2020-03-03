@@ -2,15 +2,10 @@
   //DB관련
   // mysqli : php의 sql api
 
-  //서버 접속
-  //github에 내 비번 남기기 싫어서 비번저장하는php따로 만듦
   include("../outside-webroot/db_settings.php");
-  $conn = mysqli_connect('localhost', $db_user, $db_pass);
-  unset($db_user,$db_pass);
-
-  //DB선택
-  mysqli_select_db($conn, 'opentutorials');
-
+  require("lib/db.php");
+  $conn = db_init($config["host"] ,$config["db_user"],$config["db_pass"],$config["db_name"]);
+  unset($config);
   //조회
   $result = mysqli_query($conn, 'SELECT * FROM topic');
 

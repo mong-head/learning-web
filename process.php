@@ -1,13 +1,10 @@
 <?php
   // echo $_POST['title'];
   //서버 접속
-  //github에 내 비번 남기기 싫어서 비번저장하는php따로 만듦
   include("../outside-webroot/db_settings.php");
-  $conn = mysqli_connect('localhost', $db_user, $db_pass);
-  unset($db_user,$db_pass);
-
-  //DB선택
-  mysqli_select_db($conn, 'opentutorials');
+  require("lib/db.php");
+  $conn = db_init($config["host"] ,$config["db_user"],$config["db_pass"],$config["db_name"]);
+  unset($config);
 
   $title = mysqli_real_escape_string($conn, $_POST['title']);
   $author = mysqli_real_escape_string($conn, $_POST['author']);
