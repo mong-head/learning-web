@@ -4,7 +4,7 @@
 
 <?php
   include("../../outside-webroot/db_settings.php");
-  $conn = mysqli_connect('localhost', $db_user, $db_pass);
+  $conn = mysqli_connect('192.168.1.134', $db_user, $db_pass);
   unset($db_user,$db_pass);
 
   mysqli_select_db($conn, 'opentutorials');
@@ -21,7 +21,7 @@
   // var_dump($result->num_rows);
   // exit;
 
-  //http://localhost/phpjs/7_login_database.php?name=egoing&password=1' or '1'='1
+  ///phpjs/7_login_database.php?name=egoing&password=1' or '1'='1
   //이렇게 입력하면 항상 참 - 뚫림(비번 틀리지만 로긴됨)
  ?>
 

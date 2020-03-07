@@ -27,4 +27,4 @@
   $result = mysqli_query($conn, $sql);
 
   //redirection - 다시 index페이지로 가게!
-  header('Location:http://localhost/index.php');
+  header('Location:/index.php');

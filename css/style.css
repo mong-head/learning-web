@@ -1,9 +1,9 @@
+/* bootstrap 전의 코드
 header{
   padding: 20px;
   border-bottom: 1px gray solid;
 }
 header img{
-  /* display: inline-block; */
   float: right;
   height: 100px;
 }
@@ -32,8 +32,21 @@ h2{
   border : solid 1px gray;
   padding:3px;
   margin:10px;
+} */
+
+/* bootstrap은 대강 큰거, css는 detail */
+#logo{
+  height: 100px;
+  margin-right: 20px;
 }
 
+.container{
+  padding-top: 20px;
+}
+
+#bg_color{
+  margin-bottom:20px;
+}
 body.white{
   background-color: white;
   color:black;

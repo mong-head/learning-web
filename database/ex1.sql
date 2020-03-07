@@ -2,7 +2,7 @@
 cd C:\Bitnami\wampstack-7.3.13-0\mysql\bin
 
 --실행
-mysql -hlocalhost -uroot -p
+mysql -h192.168.1.134 -uroot -p
 
 -- 데이터 베이스 보기
 show databases;
