@@ -3,7 +3,7 @@
 결과물?
 1. index.php
 ![K-001](https://user-images.githubusercontent.com/52481037/76683944-3e2df100-664b-11ea-99b4-a8376f2d6f5a.jpg)
-</br>
+<br>
 2. index.php?id=1 
 ![K-002](https://user-images.githubusercontent.com/52481037/76683949-425a0e80-664b-11ea-9392-357bf8021c5b.jpg)
 
